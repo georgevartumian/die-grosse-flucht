@@ -1,5 +1,5 @@
 /* Game Class Starter File
- * Authors: Joel A. Bianchi
+ * Authors: George Vartumian & Ian Pellegrino
  * Last Edit: 5/13/2024
  */
 
@@ -7,8 +7,8 @@
 
 //GAME VARIABLES
 private int msElapsed = 0;
-String titleText = "HorseChess";
-String extraText = "Who's Turn?";
+String titleText = "die grosse flucht";
+String extraText = "(The Great Escape)";
 
 //Screens
 Screen currentScreen;
