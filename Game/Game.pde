@@ -1,13 +1,13 @@
 /* Game Class Starter File
- * Authors: Joel A. Bianchi
- * Last Edit: 5/13/2024
+ * Authors: Ian Pellegrino & George Vartumian
+ * Last Edit: 5/22/2024
  */
 
 //import processing.sound.*;
 
 //GAME VARIABLES
 private int msElapsed = 0;
-String titleText = "HorseChess";
+String titleText = "Die Grosse Flucht ";
 String extraText = "Who's Turn?";
 
 //Screens
@@ -22,11 +22,11 @@ PImage splashBg;
 
 //Sky Screen Variables
 Grid mainGrid;
-String mainBgFile = "images/chess.jpg";
+String mainBgFile = "images/background.png";
 PImage mainBg;
 
 PImage player1;
-String player1File = "images/x_wood.png";
+String player1File = "images/rudolf.png";
 int player1Row = 3;
 int health = 3;
 
@@ -51,7 +51,7 @@ void setup() {
 
   //Match the screen size to the background image size
   size(800,600);
-  
+
   //Set the title on the title bar
   surface.setTitle(titleText);
 
@@ -92,7 +92,7 @@ void setup() {
 
 } //end setup()
 
-//Required Processing method that automatically loops
+//Required Processing that automatically loops
 //(Anything drawn on the screen should be called from here)
 void draw() {
 
