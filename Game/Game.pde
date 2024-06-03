@@ -20,6 +20,7 @@ Screen splashScreen;
 PImage splashBg;
 String splashBgFile = "images/title.png";
 //SoundFile song;
+Button startButton = new Button("rect", 345, 350, 100, 50, "start");
 
 //VARIABLES: Level1Grid Screen
 Grid level1Grid;
@@ -32,7 +33,7 @@ int player1Row = 3;
 int player1Col = 0;
 int health = 3;
 AnimatedSprite walkingChick;
-Button b1 = new Button("rect", 650, 525, 100, 50, "GoToLevel2");
+//Button b1 = new Button("rect", 650, 525, 100, 50, "GoToLevel2");
 
 //VARIABLES: Level2World Pixel-based Screen
 World level2World;
@@ -227,9 +228,14 @@ public void updateScreen(){
   }
 
   //UPDATE: splashScreen
-  if(currentScreen == splashScreen && splashScreen.getScreenTime() > 3000 && splashScreen.getScreenTime() < 5000){
+  if(currentScreen == splashScreen){
+    startButton.show();
+
+    if(startButton.isClicked()){
     System.out.print("s");
     currentScreen = level1Grid;
+    }
+
   }
 
   //UPDATE: level1Grid Screen
@@ -247,11 +253,11 @@ public void updateScreen(){
     level1Grid.showWorldSprites();
 
     //move to next level based on a button click
-    b1.show();
-    if(b1.isClicked()){
-      System.out.println("\nButton Clicked");
-      currentScreen = level2World;
-    }
+    // b1.show();
+    // if(b1.isClicked()){
+    //   System.out.println("\nButton Clicked");
+    //   currentScreen = level2World;
+    // }
   
   }
   
