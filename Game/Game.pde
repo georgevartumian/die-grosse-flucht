@@ -20,7 +20,7 @@ Screen splashScreen;
 PImage splashBg;
 String splashBgFile = "images/title.png";
 //SoundFile song;
-Button startButton = new Button("rect", 345, 350, 100, 50, "start");
+Button startButton = new Button("rect", 345, 386, 90, 71, "START");
 
 //VARIABLES: Level1Grid Screen
 Grid level1Grid;
