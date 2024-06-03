@@ -1,6 +1,6 @@
 /* Game Class Starter File
  * Authors: George Vartumian & Ian Pellegrino
- * Last Edit: 5/13/2024
+ * Last Edit: 6/3/2024
  */
 
 //import processing.sound.*;
@@ -18,7 +18,7 @@ boolean doAnimation;
 //VARIABLES: Splash Screen
 Screen splashScreen;
 PImage splashBg;
-String splashBgFile = "images/apcsa.png";
+String splashBgFile = "images/title.png";
 //SoundFile song;
 
 //VARIABLES: Level1Grid Screen
