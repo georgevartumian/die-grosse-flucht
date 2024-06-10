@@ -143,6 +143,7 @@ void draw() {
 
 
 //Known Processing method that automatically will run whenever a key is pressed
+    //set [W] key to move the player1 up & avoid Out-of-Bounds errors
 void keyPressed(){
 
   //check what key was pressed
@@ -154,16 +155,40 @@ void keyPressed(){
   if(currentScreen == level1Grid){
 
     //set [W] key to move the player1 up & avoid Out-of-Bounds errors
-    if(keyCode == 87){
-    
+    if(keyCode == 87 && player1Row != 0){
       //Store old GridLocation
       GridLocation oldLoc = new GridLocation(player1Row, player1Col);
-      
-      //Erase image from previous location
-      
-
+      //Erase image from previous locations
+       level1Grid.clearTileImage(oldLoc);
       //change the field for player1Row
       player1Row--;
+    }
+        //set [W] key to move the player1 up & avoid Out-of-Bounds errors
+    if(keyCode == 83 && player1Row != level1Grid.getNumRows()-1){
+      //Store old GridLocation
+      GridLocation oldLoc = new GridLocation(player1Row, player1Col);
+      //Erase image from previous location
+       level1Grid.clearTileImage(oldLoc);
+      //change the field for player1Row
+      player1Row++;
+    }
+        //set [W] key to move the player1 up & avoid Out-of-Bounds errors
+    if(keyCode == 65 && player1Col != 0){
+      //Store old GridLocation
+      GridLocation oldLoc = new GridLocation(player1Row, player1Col);
+      //Erase image from previous location
+       level1Grid.clearTileImage(oldLoc);
+      //change the field for player1Row
+      player1Col--;
+    }
+        //set [W] key to move the player1 up & avoid Out-of-Bounds errors
+    if(keyCode == 68 && player1Col != level1Grid.getNumCols()-1){   
+      //Store old GridLocation
+      GridLocation oldLoc = new GridLocation(player1Row, player1Col);
+      //Erase image from previous location
+       level1Grid.clearTileImage(oldLoc);
+      //change the field for player1Row
+      player1Col++;
     }
 
 
@@ -244,7 +269,7 @@ public void updateScreen(){
     currentGrid = level1Grid;
 
     //Display the Player1 image
-    GridLocation player1Loc = new GridLocation(player1Row,0);
+    GridLocation player1Loc = new GridLocation(player1Row,player1Col);
     level1Grid.setTileImage(player1Loc, player1);
     
     //update other screen elements
