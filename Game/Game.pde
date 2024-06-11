@@ -11,9 +11,9 @@
 String titleText = "die grosse flucht";
 String extraText = "(The Great Escape)";
 
-//VARIABLES: Whole Game
-AnimatedSprite runningHorse;
-boolean doAnimation;
+// //VARIABLES: Whole Game
+// AnimatedSprite runningHorse;
+// boolean doAnimation;
 
 //VARIABLES: Splash Screen
 Screen splashScreen;
@@ -32,7 +32,7 @@ String player1File = "images/rudolf.png";
 int player1Row = 3;
 int player1Col = 0;
 int health = 3;
-AnimatedSprite walkingChick;
+// AnimatedSprite walkingChick;
 //Button b1 = new Button("rect", 650, 525, 100, 50, "GoToLevel2");
 
 //VARIABLES: Level2World Pixel-based Screen
@@ -90,21 +90,21 @@ void setup() {
   currentScreen = splashScreen;
 
   //SETUP: All Game objects
-  runningHorse = new AnimatedSprite("sprites/horse_run.png", "sprites/horse_run.json", 50.0, 75.0, 10.0);
+  // runningHorse = new AnimatedSprite("sprites/horse_run.png", "sprites/horse_run.json", 50.0, 75.0, 10.0);
 
   //SETUP: Level 1
   player1 = loadImage(player1File);
   player1.resize(level1Grid.getTileWidth(),level1Grid.getTileHeight());
-  walkingChick = new AnimatedSprite("sprites/chick_walk.png", "sprites/chick_walk.json", 0.0, 0.0, 5.0);
-  level1Grid.setTileSprite(new GridLocation (5,5), walkingChick);
+  // walkingChick = new AnimatedSprite("sprites/chick_walk.png", "sprites/chick_walk.json", 0.0, 0.0, 5.0);
+  // level1Grid.setTileSprite(new GridLocation (5,5), walkingChick);
   System.out.println("Done loading Level 1 ...");
   
   //SETUP: Level 2
-  player2 = new Sprite(player2File, 0.25);
-  //player2.moveTo(player2startX, player2startY);
-  level2World.addSpriteCopyTo(runningHorse, 100, 200);  //example Sprite added to a World at a location, with a speed
-  level2World.printWorldSprites();
-  System.out.println("Done loading Level 2 ...");
+  // player2 = new Sprite(player2File, 0.25);
+  // //player2.moveTo(player2startX, player2startY);
+  // level2World.addSpriteCopyTo(runningHorse, 100, 200);  //example Sprite added to a World at a location, with a speed
+  // level2World.printWorldSprites();
+  // System.out.println("Done loading Level 2 ...");
   
   //SETUP: Sound
   // Load a soundfile from the /data folder of the sketch and play it back
@@ -220,8 +220,8 @@ void mouseClicked(){
 
 
   //Toggle the animation on & off
-  doAnimation = !doAnimation;
-  System.out.println("doAnimation: " + doAnimation);
+  // doAnimation = !doAnimation;
+  // System.out.println("doAnimation: " + doAnimation);
   if(currentGrid != null){
     currentGrid.setMark("X",currentGrid.getGridLocation());
   }
@@ -307,9 +307,9 @@ public void updateScreen(){
   // }
 
   //UPDATE: Any Screen
-  if(doAnimation){
-    runningHorse.animateHorizontal(5.0, 10.0, true);
-  }
+  // if(doAnimation){
+  //   runningHorse.animateHorizontal(5.0, 10.0, true);
+  // }
 
 
 }
